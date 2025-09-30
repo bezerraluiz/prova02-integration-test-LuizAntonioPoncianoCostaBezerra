@@ -35,13 +35,13 @@ describe('Echo validation', () => {
         .post(`${baseUrl}/anything`)
         .withForm({
           id: '1',
-          status: 'FAIL'
+          status: 'SUCCESS'
         })
         .expectStatus(StatusCodes.OK)
         .expectJsonLike({
           form: {
             id: '1',
-            status: 'FAIL'
+            status: 'SUCCESS'
           },
           method: 'POST'
         });
